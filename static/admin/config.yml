@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: luman-service/site
+
+media_folder: static/assets
+
+collections:
+  - name: service
+    label: Services
+    folder: data/service
+    create: true
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: description, label: Description, widget: string }
+      - { name: price, label: Price, widget: number }
+      - { name: category, label: Category, widget: string }
+  - name: category
+    label: Categories
+    folder: data/category
+    create: true
+    fields:
+      - { name: name, label: Name, widget: string }
+      - { name: description, label: Description, widget: string }
+      - { name: type, label: Types: widget: string }
