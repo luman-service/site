@@ -1,0 +1,24 @@
+.button
+{
+  outline: none;
+  padding: 10px 24px;
+  border: none;
+
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background: #ff2121;
+  cursor: pointer;
+
+  &:hover
+  {
+    background: #df2121;
+  }
+
+  &:active
+  {
+    background: #cf2121;
+  }
+}

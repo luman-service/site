@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header/header'
+import Brands from '../components/brands/brands'
+
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -14,6 +16,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: '' }
       ]} />
     <Header />
+    <Brands />
     {children()}
   </div>
 )

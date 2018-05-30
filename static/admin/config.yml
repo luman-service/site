@@ -14,6 +14,7 @@ collections:
       - { name: description, label: Description, widget: string }
       - { name: price, label: Price, widget: number }
       - { name: category, label: Category, widget: string }
+        { name: background, label: Background, widget: image }
   - name: category
     label: Categories
     folder: data/category

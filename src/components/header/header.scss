@@ -1,0 +1,118 @@
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 95px;
+
+  &-wrapper
+  {
+    box-sizing: border-box;
+    min-height: 510px;
+    padding: 40px 0;
+
+    background: linear-gradient(
+      0.25turn,
+      rgba(0, 0, 0, .8),
+      rgba(0, 0, 0, .5),
+      rgba(0, 0, 0, .8)
+    ),
+    url('./bg.png')
+    center center / cover no-repeat;
+  }
+
+  &__logo
+  {
+    width: 142px;
+    margin-right: 40px;
+  }
+
+  &__nav
+  {
+    display: flex;
+    align-items: center;
+
+    &-inner
+    {
+      width: 385px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-item
+    {
+      text-transform: uppercase;
+      font-size: 1em;
+    }
+  }
+
+  &__phone
+  {
+    height: 43px;
+    width: 220px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    padding-left: 35px;
+    background: url('./phone.png') left bottom / auto no-repeat;
+
+    &-order
+    {
+      width: 170px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      margin-bottom: 6px;
+
+      color: rgba(255, 255, 255, .5);
+      text-decoration: underline;
+      text-transform: uppercase;
+      font-size: .5em;
+      font-weight: 300;
+    }
+
+  }
+
+  &__arrow
+  {
+    display: block;
+    width: 45px;
+    margin: 0 auto;
+    margin-top: 45px;
+    animation: bounce 1s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 840px)
+{
+  .header
+  {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+
+    &__logo,
+    &__nav,
+    &__phone
+    {
+      margin-bottom: 30px;
+    }
+
+    &__phone
+    {
+      margin-left: -35px;
+    }
+  }
+}
+
+@keyframes bounce
+{
+  0% {margin-top: -5px}
+  100% {margin-top: 5px}
+}

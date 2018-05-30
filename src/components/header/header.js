@@ -1,28 +1,34 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Promo from '../promo/promo'
+
+import './header.scss'
+import logo from './logo@1X.png'
+import arrow from './arrow.png'
+
 const Header = () => (
-  <div className="header-wrapper">
-    <div className="header">
-      <div className="logo header__logo"></div>
+  <section className="header-wrapper">
+    <header className="header center-layout-wrapper">
+      <a href="/"><img src={logo} className="logo header__logo" /></a>
       <nav className="header__nav">
-        <ul>
+        <ul className="header__nav-inner">
           <li>
-            <a className="header__nav-item" href="#">услуги</a>
+            <a className="link header__nav-item" href="#">услуги</a>
           </li>
           <li>
-            <a className="header__nav-item" href="#">контактная информация</a>
+            <a className="link header__nav-item" href="#">контактная информация</a>
           </li>
         </ul>
       </nav>
       <div className="header__phone">
-        <span className="header__phone-order">заказать обратный звонок</span>
+        <button className="header__phone-order">заказать обратный звонок</button>
         +7 903 557 67 22
       </div>
-    </div>
-    <div className="promo">
-    </div>
-  </div>
+    </header>
+    <Promo />
+    <img className="header__arrow" src={arrow} alt=""/>
+  </section>
 )
 
 export default Header

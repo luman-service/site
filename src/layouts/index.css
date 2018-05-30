@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700&subset=cyrillic');
+
 html {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
+  color: #fff;
+  letter-spacing: 1px;
 }
 body {
   margin: 0;
 }
-article,
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* article,
 aside,
 details,
 figcaption,
@@ -183,7 +192,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em 'Montserrat', sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -198,7 +207,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -616,9 +625,29 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
-}
+} */
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:visited,
+.link:active {
+  color: #fff;
+}
+
+.link:hover {
+  opacity: .8;
+}
+
+.center-layout-wrapper {
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 55px;
 }
