@@ -632,13 +632,11 @@ pre tt:after {
   }
 }
 
-.link {
-  text-decoration: none;
-}
-
+.link,
 .link:visited,
 .link:active {
   color: #fff;
+  text-decoration: none;
 }
 
 .link:hover {

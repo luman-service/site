@@ -22,4 +22,4 @@ collections:
       - { name: name, label: Name, widget: string }
       - { name: description, label: Description, widget: string }
       - { name: type, label: Type, widget: string }
-        { name: background, label: Background, widget: image }
+      - { name: background, label: Background, widget: image }
