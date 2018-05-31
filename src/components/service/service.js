@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Service = ({text}) => (
+const Service = ({ text }) => (
   <article className="service service_body">
-    <div className="service__name"></div>
-    <div className="service__desc"></div>
+    <div className="service__name" />
+    <div className="service__desc" />
     <Button text={text} />
   </article>
 )

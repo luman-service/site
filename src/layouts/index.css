@@ -649,3 +649,9 @@ pre tt:after {
   margin-right: auto;
   padding: 0 55px;
 }
+
+@media (max-width: 840px) {
+  .center-layout-wrapper {
+    padding: 0 25px;
+  }
+}

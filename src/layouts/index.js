@@ -13,8 +13,9 @@ const Layout = ({ children, data }) => (
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'LUMAN service' },
-        { name: 'keywords', content: '' }
-      ]} />
+        { name: 'keywords', content: '' },
+      ]}
+    />
     <Header />
     <Brands />
     {children()}

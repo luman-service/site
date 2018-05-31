@@ -10,24 +10,32 @@ import arrow from './arrow.png'
 const Header = () => (
   <section className="header-wrapper">
     <header className="header center-layout-wrapper">
-      <a href="/"><img src={logo} className="logo header__logo" /></a>
+      <a href="/">
+        <img src={logo} className="logo header__logo" />
+      </a>
       <nav className="header__nav">
         <ul className="header__nav-inner">
           <li>
-            <a className="link header__nav-item" href="#">услуги</a>
+            <a className="link header__nav-item" href="#">
+              услуги
+            </a>
           </li>
           <li>
-            <a className="link header__nav-item" href="#">контактная информация</a>
+            <a className="link header__nav-item" href="#">
+              контактная информация
+            </a>
           </li>
         </ul>
       </nav>
       <div className="header__phone">
-        <button className="header__phone-order">заказать обратный звонок</button>
+        <button className="header__phone-order">
+          заказать обратный звонок
+        </button>
         +7 903 557 67 22
       </div>
     </header>
     <Promo />
-    <img className="header__arrow" src={arrow} alt=""/>
+    <img className="header__arrow" src={arrow} alt="" />
   </section>
 )
 

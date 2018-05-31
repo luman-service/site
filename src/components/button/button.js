@@ -2,8 +2,8 @@ import React from 'react'
 
 import './button.scss'
 
-const Button = ({ text }) => (
-  <button className="button">{text}</button>
+const Button = ({ className, text }) => (
+  <button className={`button ${className}`}>{text}</button>
 )
 
 export default Button

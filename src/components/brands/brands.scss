@@ -4,15 +4,27 @@
   display: flex;
   align-content: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 
   &__item
   {
     align-self: center;
+
+    &-logo
+    {
+      width: 100%;
+    }
   }
 
   &-wrapper
   {
     background: #1f1d1c;
+  }
+}
+
+@media (max-width: 840px)
+{
+  .brands__item:not(:last-child)
+  {
+    margin-right: 15px;
   }
 }

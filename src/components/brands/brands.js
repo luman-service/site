@@ -6,16 +6,26 @@ import audi from './audi.png'
 import vw from './vw.png'
 import mini from './mini.png'
 
-import './brands.scss';
+import './brands.scss'
 
 const Brands = () => (
   <section className="brands-wrapper">
     <div className="brands center-layout-wrapper">
-      <img className="brands__item" src={bmw} alt=""/>
-      <img className="brands__item" src={mercedes} alt=""/>
-      <img className="brands__item" src={audi} alt=""/>
-      <img className="brands__item" src={vw} alt=""/>
-      <img className="brands__item" src={mini} alt=""/>
+      <div className="brands__item">
+        <img className="brands__item-logo" src={bmw} alt="" />
+      </div>
+      <div className="brands__item">
+        <img className="brands__item-logo" src={mercedes} alt="" />
+      </div>
+      <div className="brands__item">
+        <img className="brands__item-logo" src={audi} alt="" />
+      </div>
+      <div className="brands__item">
+        <img className="brands__item-logo" src={vw} alt="" />
+      </div>
+      <div className="brands__item">
+        <img className="brands__item-logo" src={mini} alt="" />
+      </div>
     </div>
   </section>
 )

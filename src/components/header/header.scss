@@ -10,6 +10,7 @@
     box-sizing: border-box;
     min-height: 510px;
     padding: 40px 0;
+    position: relative;
 
     background: linear-gradient(
       0.25turn,
@@ -24,7 +25,6 @@
   &__logo
   {
     width: 142px;
-    margin-right: 40px;
   }
 
   &__nav
@@ -34,11 +34,16 @@
 
     &-inner
     {
-      width: 385px;
+      // width: 385px;
       margin: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      & li:first-child
+      {
+        margin-right: 40px;
+      }
     }
 
     &-item
@@ -63,8 +68,9 @@
 
     &-order
     {
-      width: 170px;
       cursor: pointer;
+      outline: none;
+      width: 170px;
       border: none;
       background: none;
       padding: 0;
@@ -75,16 +81,18 @@
       text-transform: uppercase;
       font-size: .5em;
       font-weight: 300;
-    }
 
+      &:hover
+      {
+        opacity: .8;
+      }
+    }
   }
 
   &__arrow
   {
-    display: block;
-    width: 45px;
-    margin: 0 auto;
-    margin-top: 45px;
+    position: absolute;
+    left: calc(50% - 22.5px);
     animation: bounce 1s ease-in-out infinite;
   }
 }
@@ -97,9 +105,37 @@
     align-items: center;
     margin-bottom: 55px;
 
+    &-wrapper
+    {
+      padding-bottom: 60px;
+    }
+
+    &__nav
+    {
+      &-inner
+      {
+        flex-direction: column;
+
+        & li
+        {
+          text-align: center;
+
+          &:first-child
+          {
+            margin-right: unset;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      &__item
+      {
+        text-align: center;
+      }
+    }
+
     &__logo,
     &__nav,
-    &__phone
     {
       margin-bottom: 30px;
     }
@@ -113,6 +149,6 @@
 
 @keyframes bounce
 {
-  0% {margin-top: -5px}
-  100% {margin-top: 5px}
+  0% {bottom: 30px}
+  100% {bottom: 25px}
 }
