@@ -1,0 +1,45 @@
+.services
+{
+  &-wrapper
+  {
+    background: #000;
+    padding-top: 40px;
+  }
+
+  &__header
+  {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__title
+  {
+    max-width: 110px;
+    margin-right: 45px;
+
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  &__desc
+  {
+    max-width: 550px;
+
+    font-size: .6em;
+    font-weight: 100;
+    line-height: 1.4em;
+    color: rgba(255, 255, 255, .6);
+  }
+
+  &__content
+  {
+    max-width: 1115px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

@@ -1,10 +1,18 @@
 import React from 'react'
 
-const Service = ({ text }) => (
-  <article className="service service_body">
-    <div className="service__name" />
-    <div className="service__desc" />
-    <Button text={text} />
+import Button from '../button/button'
+
+import './service.scss'
+
+const getBackground = (background) => ({
+  backgroundImage: `linear-gradient(0.25turn, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(${background})`
+})
+
+const Service = ({ background, description, name, text, type }) => (
+  <article className="service service_body" style={getBackground(background)}>
+    <div className="service__name">{name}</div>
+    <div className="service__desc">{description}</div>
+    <Button size="s" text={text} theme="inverse" />
   </article>
 )
 
