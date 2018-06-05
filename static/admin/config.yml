@@ -3,6 +3,7 @@ backend:
   repo: luman-service/site
 
 media_folder: static/assets
+public_folder: assets
 
 collections:
   - name: service
@@ -10,17 +11,19 @@ collections:
     folder: data/service
     create: true
     fields:
-      - { name: name, label: Name, widget: string }
+      - { name: title, label: Title, widget: string }
       - { name: description, label: Description, widget: string }
       - { name: price, label: Price, widget: number }
       - { name: category, label: Category, widget: string }
   - name: category
     label: Categories
     folder: data/category
-    slug: {{type}}
+    slug: {{slug}}
+    sort: order:asc
     create: true
     fields:
       - { name: name, label: Name, widget: string }
       - { name: description, label: Description, widget: string }
-      - { name: type, label: Type, widget: string }
+      - { name: title, label: Type, widget: string }
       - { name: background, label: Background, widget: image }
+      - { name: order, label: Order, widget: number }
