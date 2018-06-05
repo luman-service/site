@@ -13,9 +13,9 @@ collections:
     sort: order:asc
     create: true
     fields:
+      - { name: title, label: Type, widget: string }
       - { name: name, label: Name, widget: string }
       - { name: description, label: Description, widget: string }
-      - { name: title, label: Type, widget: string }
       - { name: background, label: Background, widget: image }
       - { name: order, label: Order, widget: number }
 

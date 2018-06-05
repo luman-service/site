@@ -18,7 +18,6 @@ export const query = graphql`
             name
             description
             background
-            type
           }
         }
       }
