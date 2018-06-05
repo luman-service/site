@@ -17,6 +17,7 @@ collections:
   - name: category
     label: Categories
     folder: data/category
+    slug: {{type}}
     create: true
     fields:
       - { name: name, label: Name, widget: string }
