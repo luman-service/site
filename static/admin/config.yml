@@ -9,7 +9,7 @@ collections:
   - name: category
     label: Categories
     folder: data/category
-    slug: {{slug}}
+    slug: "{{slug}}"
     sort: order:asc
     create: true
     fields:
