@@ -9,29 +9,46 @@ import Header from '../components/header/header'
 
 import './index.css'
 
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      link={[{rel: 'icon', type: 'image/png', href: '/favicon.png'}]}
-      meta={[
-        { name: 'description', content: 'LUMAN service' },
-        { name: 'keywords', content: '' },
-      ]}
-    />
-    <Header />
-    <Brands />
-    {children()}
-    <Contacts />
-    <Map />
-  </div>
-)
+class IndexLayout extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      callModal: false,
+      orderModal: false
+    }
+  }
 
-Layout.propTypes = {
+  toggleModal() {
+    const { callModal } = this.state
+    this.setState({callModal: !callModal})
+  }
+
+  render() {
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          link={[{rel: 'icon', type: 'image/png', href: '/favicon.png'}]}
+          meta={[
+            { name: 'description', content: 'LUMAN service' },
+            { name: 'keywords', content: '' },
+          ]}
+        />
+        <Header />
+        <Brands />
+        {children()}
+        <Contacts />
+        <Map />
+      </div>
+    )
+  }
+}
+
+IndexLayout.propTypes = {
   children: PropTypes.func,
 }
 
-export default Layout
+export default IndexLayout
 
 export const query = graphql`
   query SiteTitleQuery {
