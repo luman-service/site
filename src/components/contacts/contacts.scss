@@ -1,0 +1,105 @@
+.contacts
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &-wrapper
+  {
+    background: #1f1d1c;
+
+    padding-top: 30px;
+  }
+
+  &__item
+  {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    &-title
+    {
+      $paddingLeft: 35px;
+
+      padding-left: $paddingLeft;
+      margin-left: -$paddingLeft;
+
+      font-size: 1.1em;
+      font-weight: 500;
+      line-height: 1.5em;
+      text-transform: uppercase;
+
+      &_phone
+      {
+        background: url('./phone.png') left top / auto no-repeat;
+      }
+
+      &_schedule
+      {
+        background: url('./clock.png') left top / auto no-repeat;
+      }
+
+      &_address
+      {
+        background: url('./mark.png') left top / auto no-repeat;
+      }
+    }
+  }
+
+  &__schedule
+  {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    line-height: 1.5em;
+
+    &-time
+    {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+
+    &-days
+    {
+      font-size: .7em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    &-weekdays
+    {
+      margin-right: 35px;
+    }
+  }
+
+  &__address
+  {
+    font-weight: 500;
+    font-size: 1.2em;
+    text-transform: uppercase;
+
+    max-width: 150px;
+
+    &-building
+    {
+      text-transform: lowercase;
+      font-size: .7em;
+    }
+  }
+}
+
+@media (max-width: 840px)
+{
+  .contacts
+  {
+    // justify-content: space-between;
+
+    &__item-title
+    {
+      margin-left: unset;
+    }
+  }
+}

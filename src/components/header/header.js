@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import Phone from '../phone/phone'
 import Promo from '../promo/promo'
 
 import './header.scss'
@@ -31,7 +32,7 @@ const Header = () => (
         <button className="header__phone-order">
           заказать обратный звонок
         </button>
-        +7 903 557 67 22
+        <Phone />
       </div>
     </header>
     <Promo />

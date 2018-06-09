@@ -3,7 +3,7 @@
   max-width: 550px;
   width: 50%;
   min-height: 205px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 
   display: flex;
   flex-direction: column;
@@ -31,5 +31,13 @@
     opacity: .7;
 
     margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 840px) {
+  .service
+  {
+    max-width: unset;
+    width: 100%;
   }
 }

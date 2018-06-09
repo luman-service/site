@@ -2,8 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header/header'
 import Brands from '../components/brands/brands'
+import Contacts from '../components/contacts/contacts'
+import Map from '../components/map/map'
+import Header from '../components/header/header'
 
 import './index.css'
 
@@ -19,6 +21,8 @@ const Layout = ({ children, data }) => (
     <Header />
     <Brands />
     {children()}
+    <Contacts />
+    <Map />
   </div>
 )
 
