@@ -1,5 +1,5 @@
 ---
-title: Кузовной ремонт
+title: Ремонт автомобиля
 type: repair
 description: 'Слесарные, агрегатные работы'
 background: /assets/repair.png
