@@ -1,7 +1,7 @@
 ---
-name: Ремонт автомобиля
+title: Ремонт автомобиля
 description: 'Слесарные, агрегатные работы'
-title: repair
+type: repair
 background: /assets/repair.png
 order: 5
 ---
