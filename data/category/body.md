@@ -1,7 +1,8 @@
 ---
-name: Кузовной ремонт
+title: Кузовной ремонт
+type: body
 description: 'Покраска, стапельные работы'
-title: body
 background: /assets/body.png
 order: 1
 ---
+
