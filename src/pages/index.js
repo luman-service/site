@@ -23,6 +23,8 @@ export const query = graphql`
             title
             description
             background
+            type
+            order
           }
         }
       }

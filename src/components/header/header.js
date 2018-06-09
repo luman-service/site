@@ -17,12 +17,12 @@ const Header = () => (
       <nav className="header__nav">
         <ul className="header__nav-inner">
           <li>
-            <a className="link header__nav-item" href="#">
+            <a className="link header__nav-item" href="#services">
               услуги
             </a>
           </li>
           <li>
-            <a className="link header__nav-item" href="#">
+            <a className="link header__nav-item" href="#contacts">
               контактная информация
             </a>
           </li>

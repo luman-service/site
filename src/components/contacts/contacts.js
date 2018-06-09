@@ -6,7 +6,7 @@ import Phone from '../phone/phone'
 import './contacts.scss'
 
 const Contacts = () => (
-  <div className="contacts-wrapper">
+  <div className="contacts-wrapper" id="contacts">
     <div className="contacts center-layout-wrapper">
       <div className="contacts__item">
         <div className="contacts__item-title contacts__item-title_phone">свяжитесь с нами</div>

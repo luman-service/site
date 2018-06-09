@@ -5,7 +5,7 @@ import Service from '../service/service'
 import './services.scss'
 
 const Services = ({ categories }) => (
-  <section className="services-wrapper">
+  <section className="services-wrapper" id="services">
     <div className="services">
       <div className="services__header center-layout-wrapper">
         <div className="services__title">наши услуги</div>

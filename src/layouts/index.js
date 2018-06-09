@@ -13,6 +13,7 @@ const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
+      link={[{rel: 'icon', type: 'image/png', href: '/favicon.png'}]}
       meta={[
         { name: 'description', content: 'LUMAN service' },
         { name: 'keywords', content: '' },
