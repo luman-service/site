@@ -5,30 +5,44 @@ import Helmet from 'react-helmet'
 import Brands from '../components/brands/brands'
 import Contacts from '../components/contacts/contacts'
 import Map from '../components/map/map'
+import Modal from '../components/modal/modal'
 import Header from '../components/header/header'
 
 import './index.css'
+
+const MODAL_TYPES = {
+  call: 'call',
+  order: 'order'
+}
 
 class IndexLayout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      callModal: false,
-      orderModal: false
+      modal: {
+        show: false,
+        type: ''
+      }
     }
   }
 
-  toggleModal() {
-    const { callModal } = this.state
-    this.setState({callModal: !callModal})
+  hideModal() {
+    this.setState({ modal: { show: false, type: '' } })
+  }
+
+  showModal(type) {
+    this.setState({ modal: { show: true, type } })
   }
 
   render() {
+    const { modal: { show } } = this.state
+    const { children, data: { site: { siteMetadata } } } = this.props
+
     return (
       <div>
         <Helmet
-          title={data.site.siteMetadata.title}
-          link={[{rel: 'icon', type: 'image/png', href: '/favicon.png'}]}
+          title={siteMetadata.title}
+          link={[{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]}
           meta={[
             { name: 'description', content: 'LUMAN service' },
             { name: 'keywords', content: '' },
@@ -39,6 +53,7 @@ class IndexLayout extends React.Component {
         {children()}
         <Contacts />
         <Map />
+        {show && <Modal />}
       </div>
     )
   }

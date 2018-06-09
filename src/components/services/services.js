@@ -10,10 +10,10 @@ const Services = ({ categories }) => (
       <div className="services__header center-layout-wrapper">
         <div className="services__title">наши услуги</div>
         <div className="services__desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </div>
       </div>
       <div className="services__content">
@@ -21,7 +21,8 @@ const Services = ({ categories }) => (
           <Service
             {...cat.node.frontmatter}
             text="Подробнее"
-            key={cat.node.frontmatter.type} />
+            key={cat.node.frontmatter.type}
+          />
         ))}
       </div>
     </div>

@@ -4,8 +4,8 @@ import Button from '../button/button'
 
 import './service.scss'
 
-const getBackground = (background) => ({
-  backgroundImage: `linear-gradient(0.25turn, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(${background})`
+const getBackground = background => ({
+  backgroundImage: `linear-gradient(0.25turn, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(${background})`,
 })
 
 const Service = ({ background, description, title, text, type }) => (

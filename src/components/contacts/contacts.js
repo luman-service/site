@@ -9,12 +9,16 @@ const Contacts = () => (
   <div className="contacts-wrapper" id="contacts">
     <div className="contacts center-layout-wrapper">
       <div className="contacts__item">
-        <div className="contacts__item-title contacts__item-title_phone">свяжитесь с нами</div>
+        <div className="contacts__item-title contacts__item-title_phone">
+          свяжитесь с нами
+        </div>
         <Phone />
         <Button size="s" text="заказать обратный звонок" />
       </div>
       <div className="contacts__item">
-        <div className="contacts__item-title contacts__item-title_schedule">время работы</div>
+        <div className="contacts__item-title contacts__item-title_schedule">
+          время работы
+        </div>
         <div className="contacts__schedule">
           <div className="contacts__schedule-weekdays">
             <div className="contacts__schedule-days">пн &ndash; пт</div>
@@ -28,8 +32,13 @@ const Contacts = () => (
         </div>
       </div>
       <div className="contacts__item">
-        <div className="contacts__item-title contacts__item-title_address">адрес</div>
-        <div className="contacts__address">кутузовский проспект 36 <span className="contacts__address-building">стр.</span> 15</div>
+        <div className="contacts__item-title contacts__item-title_address">
+          адрес
+        </div>
+        <div className="contacts__address">
+          кутузовский проспект 36{' '}
+          <span className="contacts__address-building">стр.</span> 15
+        </div>
       </div>
     </div>
   </div>
