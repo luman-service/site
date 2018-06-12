@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { GoogleApiWrapper } from 'google-maps-react'
 
 import Brands from '../components/brands/brands'
 import Contacts from '../components/contacts/contacts'
@@ -36,7 +37,7 @@ class IndexLayout extends React.Component {
 
   render() {
     const { modal: { show } } = this.state
-    const { children, data: { site: { siteMetadata } } } = this.props
+    const { children, data: { site: { siteMetadata } }, google } = this.props
 
     return (
       <div>
@@ -52,7 +53,7 @@ class IndexLayout extends React.Component {
         <Brands />
         {children()}
         <Contacts />
-        <Map />
+        <Map google={google} />
         {show && <Modal />}
       </div>
     )
@@ -63,14 +64,16 @@ IndexLayout.propTypes = {
   children: PropTypes.func,
 }
 
-export default IndexLayout
-
 export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
+query SiteTitleQuery {
+  site {
+    siteMetadata {
+      title
     }
   }
+}
 `
+
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyDz1KVhg7KuSCZHvy2oCuGmqTXZv2RZfwQ'
+})(IndexLayout)

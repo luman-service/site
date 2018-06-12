@@ -11,6 +11,7 @@
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-source-filesystem": "^1.5.36",
     "gatsby-transformer-remark": "^1.7.41",
+    "google-maps-react": "^2.0.2",
     "netlify-cms": "^1.8.4",
     "react-helmet": "^5.2.0"
   },
