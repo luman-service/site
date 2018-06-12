@@ -7,8 +7,8 @@ class Map extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: 'LUMAN service',
-      location: { lat: 55.7407549, lng: 37.5263965 }
+      title: 'LUMAN service',
+      location: { lat: 55.7407549, lng: 37.5263965 },
     }
   }
 
@@ -17,36 +17,41 @@ class Map extends Component {
   }
 
   loadMap() {
-    if (this.props && this.props.google) { // checks to make sure that props have been passed
-      const { location, name } = this.state;
-      const {google: { maps }} = this.props; // sets props equal to google
-      const node = ReactDOM.findDOMNode(this.map); // finds the 'map' div in the React DOM, names it node
+    if (this.props && this.props.google) {
+      // checks to make sure that props have been passed
+      const { location, title } = this.state
+      const {
+        google: { maps },
+      } = this.props // sets props equal to google
+      const node = ReactDOM.findDOMNode(this.map) // finds the 'map' div in the React DOM, names it node
       const mapConfig = {
         center: location,
         zoom: 16, // sets zoom. Lower numbers are zoomed further out.
         mapTypeId: 'roadmap', // optional main map layer. Terrain, satellite, hybrid or roadmap--if unspecified, defaults to roadmap.
         disableDefaultUI: true,
-        styles
+        styles,
       }
 
-      this.map = new maps.Map(node, mapConfig); // creates a new Google map on the specified node (ref='map') with the specified configuration set above.
+      this.map = new maps.Map(node, mapConfig) // creates a new Google map on the specified node (ref='map') with the specified configuration set above.
 
-      const marker = new google.maps.Marker({ // creates a new Google maps Marker object.
-        position: {lat: location.lat, lng: location.lng}, // sets position of marker to specified location
+      const marker = new google.maps.Marker({
+        // creates a new Google maps Marker object.
+        position: { lat: location.lat, lng: location.lng }, // sets position of marker to specified location
         map: this.map, // sets markers to appear on the map we just created on line 35
-        title: name // the title of the marker is set to the name of the location
-      });
+        title, // the title of the marker is set to the name of the location
+      })
     }
   }
 
   render() {
     const style = {
       width: '100vw',
-      height: '280px'
+      height: '280px',
     }
 
-    return ( // in our return function you must return a div with ref and style.
-      <div ref={node => this.map = node} style={style}>
+    return (
+      // in our return function you must return a div with ref and style.
+      <div ref={node => (this.map = node)} style={style}>
         loading map...
       </div>
     )

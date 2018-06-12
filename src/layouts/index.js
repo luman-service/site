@@ -13,7 +13,7 @@ import './index.css'
 
 const MODAL_TYPES = {
   call: 'call',
-  order: 'order'
+  order: 'order',
 }
 
 class IndexLayout extends React.Component {
@@ -22,8 +22,8 @@ class IndexLayout extends React.Component {
     this.state = {
       modal: {
         show: false,
-        type: ''
-      }
+        type: '',
+      },
     }
   }
 
@@ -36,8 +36,16 @@ class IndexLayout extends React.Component {
   }
 
   render() {
-    const { modal: { show } } = this.state
-    const { children, data: { site: { siteMetadata } }, google } = this.props
+    const {
+      modal: { show },
+    } = this.state
+    const {
+      children,
+      data: {
+        site: { siteMetadata },
+      },
+      google,
+    } = this.props
 
     return (
       <div>
@@ -65,15 +73,15 @@ IndexLayout.propTypes = {
 }
 
 export const query = graphql`
-query SiteTitleQuery {
-  site {
-    siteMetadata {
-      title
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
     }
   }
-}
 `
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDz1KVhg7KuSCZHvy2oCuGmqTXZv2RZfwQ'
+  apiKey: 'AIzaSyDz1KVhg7KuSCZHvy2oCuGmqTXZv2RZfwQ',
 })(IndexLayout)
