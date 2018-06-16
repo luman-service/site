@@ -32,8 +32,7 @@ const Header = ({ showModal }) => (
       <div className="header__phone">
         <button
           className="header__phone-order"
-          onClick={() => showModal(MODAL_TYPES.call)}
-        >
+          onClick={() => showModal(MODAL_TYPES.call)}>
           заказать обратный звонок
         </button>
         <Phone />

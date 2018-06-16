@@ -6,8 +6,7 @@ const Button = ({ onClickHandler, size, text, theme }) => (
   <button
     className={`button button_theme_${theme || 'normal'} button_size_${size ||
       'm'}`}
-    onClick={onClickHandler}
-  >
+    onClick={onClickHandler}>
     {text}
   </button>
 )

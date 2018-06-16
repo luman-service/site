@@ -17,8 +17,8 @@ class IndexLayout extends React.Component {
     this.state = {
       modal: {
         show: false,
-        type: '',
-      },
+        type: ''
+      }
     }
   }
 
@@ -32,14 +32,14 @@ class IndexLayout extends React.Component {
 
   render() {
     const {
-      modal: { show, type },
+      modal: { show, type }
     } = this.state
     const {
       children,
       data: {
-        site: { siteMetadata },
+        site: { siteMetadata }
       },
-      google,
+      google
     } = this.props
 
     return (
@@ -49,7 +49,7 @@ class IndexLayout extends React.Component {
           link={[{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]}
           meta={[
             { name: 'description', content: 'LUMAN service' },
-            { name: 'keywords', content: '' },
+            { name: 'keywords', content: '' }
           ]}
         />
         <Header showModal={this.showModal} />
@@ -64,7 +64,7 @@ class IndexLayout extends React.Component {
 }
 
 IndexLayout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 }
 
 export const query = graphql`
@@ -78,5 +78,5 @@ export const query = graphql`
 `
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDz1KVhg7KuSCZHvy2oCuGmqTXZv2RZfwQ',
+  apiKey: 'AIzaSyDz1KVhg7KuSCZHvy2oCuGmqTXZv2RZfwQ'
 })(IndexLayout)

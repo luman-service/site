@@ -8,7 +8,7 @@ class Map extends Component {
     super(props)
     this.state = {
       title: 'LUMAN service',
-      location: { lat: 55.7407549, lng: 37.5263965 },
+      location: { lat: 55.7407549, lng: 37.5263965 }
     }
   }
 
@@ -21,7 +21,7 @@ class Map extends Component {
       // checks to make sure that props have been passed
       const { location, title } = this.state
       const {
-        google: { maps },
+        google: { maps }
       } = this.props // sets props equal to google
       const node = ReactDOM.findDOMNode(this.map) // finds the 'map' div in the React DOM, names it node
       const mapConfig = {
@@ -29,7 +29,7 @@ class Map extends Component {
         zoom: 16, // sets zoom. Lower numbers are zoomed further out.
         mapTypeId: 'roadmap', // optional main map layer. Terrain, satellite, hybrid or roadmap--if unspecified, defaults to roadmap.
         disableDefaultUI: true,
-        styles,
+        styles
       }
 
       this.map = new maps.Map(node, mapConfig) // creates a new Google map on the specified node (ref='map') with the specified configuration set above.
@@ -38,7 +38,7 @@ class Map extends Component {
         // creates a new Google maps Marker object.
         position: { lat: location.lat, lng: location.lng }, // sets position of marker to specified location
         map: this.map, // sets markers to appear on the map we just created on line 35
-        title, // the title of the marker is set to the name of the location
+        title // the title of the marker is set to the name of the location
       })
     }
   }
@@ -46,7 +46,7 @@ class Map extends Component {
   render() {
     const style = {
       width: '100vw',
-      height: '280px',
+      height: '280px'
     }
 
     return (
