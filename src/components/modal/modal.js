@@ -1,10 +1,12 @@
 import React, { Component, Fragment } from 'react'
 
+import { MODAL_TYPES } from '../../constatnts'
+
 import './modal.scss'
 
 const MODAL_TITLES = {
   call: 'заказать обратный звонок',
-  order: 'записаться на обслуживание',
+  order: 'записаться на обслуживание'
 }
 
 class Modal extends Component {
@@ -41,7 +43,7 @@ class Modal extends Component {
                 className="modal__form-input modal__form-input-phone"
               />
             </div>
-            {type === 'order' && (
+            {type === MODAL_TYPES.order && (
               <Fragment>
                 <div className="modal__form-input-wrapper modal__form-input-wrapper-car">
                   <input
