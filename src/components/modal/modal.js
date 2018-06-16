@@ -77,7 +77,9 @@ class Modal extends Component {
             </div>
             <input
               type="submit"
-              value="позвоните мне"
+              value={
+                type === MODAL_TYPES.order ? 'записаться' : 'позвоните мне'
+              }
               className="modal__form-submit"
               onClick={e => e.preventDefault()}
             />
