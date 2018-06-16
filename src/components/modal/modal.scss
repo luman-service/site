@@ -1,7 +1,181 @@
+$inputMarginRight: 20px;
+
 .modal
 {
-  &-wapper {
-    display: none;
+  padding: 40px;
+  width: 600px;
+  background-color: #000;
+  border: 2px solid currentColor;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+
+  &__close
+  {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  &__title
+  {
+    width: 60%;
+    margin-bottom: 20px;
+
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    box-sizing: border-box;
+  }
+
+  &__sub
+  {
+    width: 25%;
+
+    font-size: .6em;
+    line-height: 1.3em;
+    color: rgba(255, 255, 255, 0.4);
+
+    box-sizing: border-box;
+  }
+
+  &__required
+  {
+    position: absolute;
+    bottom: 103px;
+    left: 62%;
+
+    width: 20%;
+  }
+
+  &__form
+  {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &-input
+    {
+      outline: none;
+
+      box-sizing: border-box;
+      border: none;
+      width: 100%;
+
+      background: #000;
+
+      font-size: 1em;
+      font-weight: 700;
+      font-family: inherit;
+      color: rgba(255, 255, 255, 0.4);
+
+      &-wrapper
+      {
+        position: relative;
+        padding: 11px 0 11px 20px;
+        border: 1px solid #fff;
+        box-sizing: border-box;
+        margin-right: $inputMarginRight;
+
+        &-name,
+        &-phone,
+        &-car
+        {
+          width: 45%;
+        }
+
+        &-name,
+        &-phone,
+        &-car,
+        &-date,
+        &-time
+        {
+          margin-bottom: 15px;
+        }
+
+        &-date
+        {
+          width: calc(30% - #{$inputMarginRight});
+        }
+
+        &-time
+        {
+          width: 15%;
+          margin-right: 0;
+        }
+
+        &-date,
+        &-time
+        {
+          padding-left: 10px;
+        }
+
+        &-name::before,
+        &-phone::before,
+        &-car::before,
+        &-date::before,
+        &-time::before
+        {
+          content: '*';
+
+          font-size: .6em;
+          color: rgba(255, 255, 255, 0.4);
+
+          position: absolute;
+          left: 6px;
+          top: 5px;
+        }
+
+        &-comment
+        {
+          width: 60%;
+          height: 85px;
+
+          & textarea
+          {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &-submit
+    {
+      align-self: flex-end;
+
+      outline: none;
+      padding: 10px 24px;
+
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: 700;
+      font-family: inherit;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      background: #ff2121;
+      border: none;
+
+      &:hover
+      {
+        background: #df2121;
+      }
+
+      &:active
+      {
+        background: #cf2121;
+      }
+    }
+  }
+
+  &-wrapper {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -10,5 +184,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
   }
 }

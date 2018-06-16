@@ -1,11 +1,13 @@
 import React from 'react'
 
+import { MODAL_TYPES } from '../../constatnts'
+
 import Button from '../button/button'
 import Phone from '../phone/phone'
 
 import './contacts.scss'
 
-const Contacts = () => (
+const Contacts = ({ showModal }) => (
   <div className="contacts-wrapper" id="contacts">
     <div className="contacts center-layout-wrapper">
       <div className="contacts__item">
@@ -13,7 +15,11 @@ const Contacts = () => (
           свяжитесь с нами
         </div>
         <Phone />
-        <Button size="s" text="заказать обратный звонок" />
+        <Button
+          size="s"
+          text="заказать обратный звонок"
+          onClickHandler={() => showModal(MODAL_TYPES.call)}
+        />
       </div>
       <div className="contacts__item">
         <div className="contacts__item-title contacts__item-title_schedule">

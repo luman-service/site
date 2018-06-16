@@ -11,11 +11,6 @@ import Header from '../components/header/header'
 
 import './index.css'
 
-const MODAL_TYPES = {
-  call: 'call',
-  order: 'order',
-}
-
 class IndexLayout extends React.Component {
   constructor(props) {
     super(props)
@@ -27,17 +22,17 @@ class IndexLayout extends React.Component {
     }
   }
 
-  hideModal() {
+  hideModal = () => {
     this.setState({ modal: { show: false, type: '' } })
   }
 
-  showModal(type) {
+  showModal = type => {
     this.setState({ modal: { show: true, type } })
   }
 
   render() {
     const {
-      modal: { show },
+      modal: { show, type },
     } = this.state
     const {
       children,
@@ -57,12 +52,12 @@ class IndexLayout extends React.Component {
             { name: 'keywords', content: '' },
           ]}
         />
-        <Header />
+        <Header showModal={this.showModal} />
         <Brands />
         {children()}
-        <Contacts />
+        <Contacts showModal={this.showModal} />
         <Map google={google} />
-        {show && <Modal />}
+        {show && <Modal type={type} hideModal={this.hideModal} />}
       </div>
     )
   }

@@ -1,5 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
+
+import { MODAL_TYPES } from '../../constatnts'
 
 import Phone from '../phone/phone'
 import Promo from '../promo/promo'
@@ -8,7 +9,7 @@ import './header.scss'
 import logo from './logo@1X.png'
 import arrow from './arrow.png'
 
-const Header = () => (
+const Header = ({ showModal }) => (
   <section className="header-wrapper">
     <header className="header center-layout-wrapper">
       <a href="/">
@@ -29,13 +30,16 @@ const Header = () => (
         </ul>
       </nav>
       <div className="header__phone">
-        <button className="header__phone-order">
+        <button
+          className="header__phone-order"
+          onClick={() => showModal(MODAL_TYPES.call)}
+        >
           заказать обратный звонок
         </button>
         <Phone />
       </div>
     </header>
-    <Promo />
+    <Promo showModal={showModal} />
     <img className="header__arrow" src={arrow} alt="" />
   </section>
 )
