@@ -3,11 +3,11 @@ const imagemin = require('gulp-imagemin')
 const imageminPngquant = require('imagemin-pngquant')
 
 gulp.task('default', () => {
-  gulp.src('src/**/*.png')
+  gulp.src(['src/**/*.png', 'static/**/*.png'])
     .pipe(imagemin([
       imageminPngquant()
     ], {
-      vrebose: true
+      verbose: true
     }))
     .pipe(gulp.dest(file => {
       return file.base
