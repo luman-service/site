@@ -156,6 +156,10 @@ $inputMarginRight: 20px;
       padding: 10px 0;
       width: calc(40% - 20px);
 
+      border: none;
+      border-radius: 0;
+      -webkit-appearance: none;
+
       color: #fff;
       font-size: 1.2em;
       font-weight: 700;
