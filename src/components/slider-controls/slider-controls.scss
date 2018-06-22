@@ -1,0 +1,28 @@
+.slider-controls
+{
+    margin-top: 55px;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+
+    &__item
+    {
+        cursor: pointer;
+
+        width: 9px;
+        height: 9px;
+
+        background: #ccc;
+
+        &:not(:last-child)
+        {
+            margin-right: 7px;
+        }
+
+        &_active
+        {
+            background: #ff2121;
+        }
+    }
+}
