@@ -6,16 +6,16 @@ import Button from '../button/button'
 
 import './promo.scss'
 
-const Promo = ({ showModal }) => (
-  <div className="promo center-layout-wrapper">
-    <div className="promo__title">акция</div>
-    <div className="promo__desc">При покупке масла MOTUL</div>
-    <div className="promo__desc-sub">замена масла бесплатно!</div>
-    <Button
-      text="записаться"
-      onClickHandler={() => showModal(MODAL_TYPES.order)}
-    />
-  </div>
-)
+const Promo = ({ showModal, slide }) => (
+    <div className={`promo center-layout-wrapper promo_type_${slide.type}`}>
+      {slide.title && <div className="promo__title">{slide.title}</div>}
+      <div className="promo__desc">{slide.desc}</div>
+      <div className="promo__desc-sub">{slide.descSub}</div>
+      <Button
+        text="записаться"
+        onClickHandler={() => showModal(MODAL_TYPES.order)}
+      />
+    </div>
+  )
 
 export default Promo

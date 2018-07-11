@@ -7,19 +7,17 @@
 
   &-wrapper
   {
+    opacity: 1;
     box-sizing: border-box;
     min-height: 510px;
     padding: 40px 0;
     position: relative;
 
-    background: linear-gradient(
-      0.25turn,
-      rgba(0, 0, 0, .8),
-      rgba(0, 0, 0, .5),
-      rgba(0, 0, 0, .8)
-    ),
-    url('./bg.png')
-    center center / cover no-repeat;
+    transition: background 1s ease;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &__logo

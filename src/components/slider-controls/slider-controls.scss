@@ -1,8 +1,5 @@
 .slider-controls
 {
-    margin-top: 55px;
-    width: 100%;
-
     display: flex;
     justify-content: flex-end;
 
@@ -24,5 +21,13 @@
         {
             background: #ff2121;
         }
+    }
+}
+
+@media (max-width: 1100px)
+{
+    .slider-controls
+    {
+        right: 5%;
     }
 }
