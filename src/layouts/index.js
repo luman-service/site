@@ -5,9 +5,10 @@ import { GoogleApiWrapper } from 'google-maps-react'
 
 import Brands from '../components/brands/brands'
 import Contacts from '../components/contacts/contacts'
+import Header from '../components/header/header'
 import Map from '../components/map/map'
 import Modal from '../components/modal/modal'
-import Header from '../components/header/header'
+import Promo from '../components/promo/promo'
 
 import './index.css'
 
@@ -53,6 +54,7 @@ class IndexLayout extends React.Component {
           ]}
         />
         <Header showModal={this.showModal} />
+        <Promo showModal={this.showModal} />
         <Brands />
         {children()}
         <Contacts showModal={this.showModal} />
