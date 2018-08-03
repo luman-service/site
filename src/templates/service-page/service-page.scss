@@ -1,0 +1,19 @@
+.service-groups-description
+{
+  background: #000000;
+
+
+  &__wrapper
+  {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+  }
+
+  &__content
+  {
+    max-width: 990px;
+    font-size: .8em;
+    font-weight: 100;
+  }
+}

@@ -1,6 +1,5 @@
 import React from 'react'
-
-import Button from '../button/button'
+import Link from 'gatsby-link'
 
 import './service.scss'
 
@@ -8,11 +7,11 @@ const getBackground = background => ({
   backgroundImage: `linear-gradient(0.25turn, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(${background})`
 })
 
-const Service = ({ background, description, title, text, type }) => (
+const Service = ({ background, description, title, text, type, slug }) => (
   <article className="service service_body" style={getBackground(background)}>
     <div className="service__name">{title}</div>
     <div className="service__desc">{description}</div>
-    <Button size="s" text={text} theme="inverse" />
+    <Link to={slug} className="button button_theme_inverse button_size_s">{text}</Link>
   </article>
 )
 

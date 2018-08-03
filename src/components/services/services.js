@@ -22,6 +22,7 @@ const Services = ({ categories }) => (
             {...cat.node.frontmatter}
             text="Подробнее"
             key={cat.node.frontmatter.type}
+            slug={cat.node.fields.slug}
           />
         ))}
       </div>
