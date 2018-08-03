@@ -19,14 +19,20 @@
   "scripts": {
     "build": "node_modules/gulp/bin/gulp.js && gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
+    "prettify": "prettier --write 'src/**/*.js'",
     "minify": "node_modules/gulp/bin/gulp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-imagemin": "^4.1.0",
+    "husky": "^0.14.3",
     "imagemin-pngquant": "^5.1.0",
     "prettier": "^1.12.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettify"
+    }
   }
 }
