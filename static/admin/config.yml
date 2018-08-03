@@ -17,13 +17,23 @@ collections:
       - { name: background, label: Background, widget: image }
       - { name: type, label: Type, widget: string }
       - { name: order, label: Order, widget: number }
-
-  - name: service
-    label: Services
-    folder: data/service
-    create: true
-    fields:
-      - { name: title, label: Title, widget: string }
-      - { name: description, label: Description, widget: string }
-      - { name: price, label: Price, widget: number }
-      - { name: category, label: Category, widget: string }
+      - name: services_groups
+        label: Services groups
+        widget: list
+        fields:
+          - name: caption
+            label: Caption
+            widget: string
+          - name: description
+            label: Description
+            widget: string
+          - name: price_examples
+            label: Price examples
+            widget: list
+            fields:
+              - name: service_name
+                label: Service name
+                widget: string
+              - name: service_price
+                label: Service price
+                widget: string

@@ -19,6 +19,9 @@ export const query = graphql`
             type
             order
           }
+          fields {
+            slug
+          }
         }
       }
     }

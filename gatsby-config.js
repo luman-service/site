@@ -7,7 +7,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/data/category`,
-        name: "category",
+        name: 'category',
       },
     },
     'gatsby-plugin-netlify-cms',
