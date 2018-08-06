@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
   queryResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/service-page.js`),
+      component: path.resolve(`./src/templates/service-page/service-page.js`),
       context: {
         slug: node.fields.slug,
       },
