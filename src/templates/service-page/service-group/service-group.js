@@ -1,8 +1,8 @@
 import React from 'react';
 import './service-group.scss';
 
-import PriceExamples from './price-examples';
-import Button from '../../components/button/button';
+import PriceExamples from '../price-examples/price-examples';
+import Button from '../../../components/button/button';
 
 
 export default ({ data, index }) => {

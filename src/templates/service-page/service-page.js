@@ -1,7 +1,5 @@
 import React from 'react';
-
-import ServiceGroup from './services-group';
-import './service-page.scss';
+import ServiceGroup from './service-group/service-group';
 
 
 export default ({ data }) => {
@@ -9,8 +7,8 @@ export default ({ data }) => {
 
   if (!serviceGroupsData) {
     return (
-      <section className="" id="service-groups">
-        <div className="">
+      <section id="service-groups">
+        <div>
           Похоже вы не внесли данные для этой страницы!
         </div>
       </section>
@@ -18,7 +16,7 @@ export default ({ data }) => {
   }
 
   return (
-    <section className="" id="service-groups">
+    <section id="service-groups">
       {serviceGroupsData.map((serviceGroupData, i) => <ServiceGroup data={serviceGroupData} key={i} index={i} />)}
     </section>
   );
