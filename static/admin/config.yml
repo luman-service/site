@@ -28,6 +28,9 @@ collections:
           - name: description
             label: Description
             widget: string
+          - name: picture
+            label: Picture
+            widget: image
           - name: price_examples
             label: Price examples
             widget: list

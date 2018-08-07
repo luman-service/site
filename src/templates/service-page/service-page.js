@@ -37,6 +37,7 @@ export const queruy = graphql`
         service_groups {
           caption
           description
+          picture
           price_examples {
             service_name
             service_price

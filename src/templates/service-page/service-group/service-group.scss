@@ -50,10 +50,22 @@
 
     margin-bottom: 18px;
   }
+
+  &__picture
+  {
+    min-width: 100%;
+    max-height: 204px;
+    object-fit: cover;
+  }
 }
 
 .call-manager-block
 {
   display: flex;
   justify-content: space-between;
+}
+
+.call-button-container
+{
+  padding: 10px;
 }

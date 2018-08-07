@@ -11,12 +11,15 @@ export default ({ data, index }) => {
       <div className="service-group__container">
         <div className="service-group__caption">{data.caption}</div>
         <div className="service-group__description">{data.description}</div>
+        <img className="service-group__picture" src={data.picture} />
         <div className="call-manager-block">
-          <div className="">
+          <div>
             <div className="service-group__price_example_caption">Примеры цен</div>
             <div className="service-group__description">Если в списке нет интересующих вас работ или у вас есть вопросы по ценам, задавайте вопрос менеджеру.</div>
           </div>
-          <Button text="Записаться на ремонт" />
+          <div className="call-button-container">
+            <Button text="Записаться на ремонт" />
+          </div>
         </div>
         <PriceExamples data={data.price_examples} />
       </div>
