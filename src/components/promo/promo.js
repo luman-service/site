@@ -31,7 +31,7 @@ class Promo extends Component {
     //     }
     //   })
     // }, SLIDER_INTERVAL)
-    this.setSliderInterval();
+    this.setSliderInterval()
   }
 
   componentWillUnmount() {
@@ -57,8 +57,8 @@ class Promo extends Component {
       return { ...prevState, activeSlide: id }
     })
 
-    clearInterval(this.interval);
-    this.setSliderInterval();
+    clearInterval(this.interval)
+    this.setSliderInterval()
     // this.interval = setInterval(() => {
     //   this.setState(prevState => {
     //     const { activeSlide, slides } = prevState
@@ -74,7 +74,7 @@ class Promo extends Component {
 
   render() {
     const { activeSlide, slides } = this.state
-    const { showModal } = this.props;
+    const { showModal } = this.props
     const slide = slides[activeSlide]
 
     return (
@@ -91,10 +91,17 @@ class Promo extends Component {
           <SliderControls
             activeSlide={activeSlide}
             setActiveSlide={this.setActiveSlide}
-            slides={slides} />
+            slides={slides}
+          />
         </div>
         {slides.map((slide, i) => (
-          <img key={slide.title} className={`promo__bg promo__bg_${activeSlide === i ? 'active': ''}`} src={slide.bg} />
+          <img
+            key={slide.title}
+            className={`promo__bg promo__bg_${
+              activeSlide === i ? 'active' : ''
+            }`}
+            src={slide.bg}
+          />
         ))}
       </section>
     )

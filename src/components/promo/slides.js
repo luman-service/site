@@ -13,7 +13,8 @@ export default [
   {
     title: '',
     desc: 'Кузовной ремонт',
-    descSub: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    descSub:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     icon: 'paint',
     type: 'uncommon',
     bg: bg2

@@ -28,12 +28,16 @@ class Modal extends React.Component {
           <div className="modal__sub">
             Заполните форму и мы с вами свяжемся в самое ближайшее время.
           </div>
-          <form method="POST" action="https://formspree.io/serviceluman@gmail.com" className="modal__form">
+          <form
+            method="POST"
+            action="https://formspree.io/serviceluman@gmail.com"
+            className="modal__form">
             <div>
               <input
                 type="hidden"
                 name="_next"
-                value={window.location.origin} />
+                value={window.location.origin}
+              />
             </div>
             <div className="modal__form-input-wrapper modal__form-input-wrapper-name">
               <input
@@ -51,38 +55,34 @@ class Modal extends React.Component {
                 className="modal__form-input modal__form-input-phone"
               />
             </div>
-            {
-              type === MODAL_TYPES.order
-                ? (
-                  <Fragment>
-                    <div className="modal__form-input-wrapper modal__form-input-wrapper-car">
-                      <input
-                        name="car"
-                        placeholder="МОДЕЛЬ АВТОМОБИЛЯ"
-                        type="text"
-                        className="modal__form-input modal__form-input-car"
-                      />
-                    </div>
-                    <div className="modal__form-input-wrapper modal__form-input-wrapper-date">
-                      <input
-                        name="visit-date"
-                        placeholder="ДД7ММ.ГГГ"
-                        type="date"
-                        className="modal__form-input modal__form-input-date"
-                      />
-                    </div>
-                    <div className="modal__form-input-wrapper modal__form-input-wrapper-time">
-                      <input
-                        name="visit-time"
-                        placeholder="ЧЧ:ММ"
-                        type="text"
-                        className="modal__form-input modal__form-input-time"
-                      />
-                    </div>
-                  </Fragment>
-                )
-                : null
-            }
+            {type === MODAL_TYPES.order ? (
+              <Fragment>
+                <div className="modal__form-input-wrapper modal__form-input-wrapper-car">
+                  <input
+                    name="car"
+                    placeholder="МОДЕЛЬ АВТОМОБИЛЯ"
+                    type="text"
+                    className="modal__form-input modal__form-input-car"
+                  />
+                </div>
+                <div className="modal__form-input-wrapper modal__form-input-wrapper-date">
+                  <input
+                    name="visit-date"
+                    placeholder="ДД7ММ.ГГГ"
+                    type="date"
+                    className="modal__form-input modal__form-input-date"
+                  />
+                </div>
+                <div className="modal__form-input-wrapper modal__form-input-wrapper-time">
+                  <input
+                    name="visit-time"
+                    placeholder="ЧЧ:ММ"
+                    type="text"
+                    className="modal__form-input modal__form-input-time"
+                  />
+                </div>
+              </Fragment>
+            ) : null}
             <div className="modal__form-input-wrapper modal__form-input-wrapper-comment">
               <textarea
                 name="comment"
