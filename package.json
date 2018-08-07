@@ -13,6 +13,8 @@
     "gatsby-transformer-remark": "^1.7.41",
     "google-maps-react": "^2.0.2",
     "netlify-cms": "^1.8.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0"
   },
   "license": "MIT",

@@ -56,7 +56,7 @@ class IndexLayout extends React.Component {
         <Header showModal={this.showModal} />
         <Promo showModal={this.showModal} />
         <Brands />
-        {children()}
+        {children({ ...this.props, showModal: this.showModal })}
         <Contacts showModal={this.showModal} />
         <Map google={google} />
         {show && <Modal type={type} hideModal={this.hideModal} />}

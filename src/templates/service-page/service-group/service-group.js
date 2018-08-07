@@ -3,9 +3,10 @@ import './service-group.scss';
 
 import PriceExamples from '../price-examples/price-examples';
 import Button from '../../../components/button/button';
+import { MODAL_TYPES } from '../../../constatnts';
 
 
-export default ({ data, index }) => {
+export default ({ data, index, showModal }) => {
   return (
     <section className={`service-group service-group__wrapper-${index % 2 === 0 ? 'dark' : 'light'}`}>
       <div className="service-group__container">
@@ -18,7 +19,9 @@ export default ({ data, index }) => {
             <div className="service-group__description">Если в списке нет интересующих вас работ или у вас есть вопросы по ценам, задавайте вопрос менеджеру.</div>
           </div>
           <div className="call-button-container">
-            <Button text="Записаться на ремонт" />
+            <Button
+              text="Записаться на ремонт"
+              onClickHandler={() => showModal(MODAL_TYPES.order)} />
           </div>
         </div>
         <PriceExamples data={data.price_examples} />

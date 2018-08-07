@@ -3,7 +3,7 @@ import ServiceGroup from './service-group/service-group';
 import './service-page.scss';
 
 
-export default ({ data }) => {
+export default ({ data, showModal }) => {
   const serviceGroupsData = data.markdownRemark.frontmatter.service_groups;
   const serviceGroupDescription = data.markdownRemark.frontmatter.service_groups_description;
 
@@ -24,7 +24,7 @@ export default ({ data }) => {
           {serviceGroupDescription}
         </div>
       </div>
-      {serviceGroupsData.map((serviceGroupData, i) => <ServiceGroup data={serviceGroupData} key={i} index={i} />)}
+      {serviceGroupsData.map((serviceGroupData, i) => <ServiceGroup data={serviceGroupData} key={i} index={i} showModal={showModal} />)}
     </section>
   );
 }
