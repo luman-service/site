@@ -4,16 +4,18 @@ import './price-examples.scss';
 
 const renderPriceExamplesTable = priceExampleData => (
   <table className="price-examples-table">
-    {
-      priceExampleData.map((priceExampleData) => {
-        return (
-          <tr>
-            <td className="price-examples-table__td price-examples-table__td__service-name">{priceExampleData.service_name}</td>
-            <td className="price-examples-table__td price-examples-table__td__service-price">{priceExampleData.service_price}</td>
-          </tr>
-        );
-      })
-    }
+    <tbody>
+      {
+        priceExampleData.map((priceExampleData, i) => {
+          return (
+            <tr key={i}>
+              <td className="price-examples-table__td price-examples-table__td__service-name">{priceExampleData.service_name}</td>
+              <td className="price-examples-table__td price-examples-table__td__service-price">{priceExampleData.service_price}</td>
+            </tr>
+          );
+        })
+      }
+    </tbody>
   </table>
 );
 
