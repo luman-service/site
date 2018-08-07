@@ -17,8 +17,9 @@ collections:
       - { name: background, label: Background, widget: image }
       - { name: type, label: Type, widget: string }
       - { name: order, label: Order, widget: number }
-      - name: services_groups
-        label: Services groups
+      - { name: service_groups_description, label: Service groups description, widget: string }
+      - name: service_groups
+        label: Service groups
         widget: list
         fields:
           - name: caption
