@@ -7,37 +7,37 @@ public_folder: assets
 
 collections:
   - name: category
-    label: Categories
+    label: Категории
     folder: data/category
     slug: "{{slug}}"
     create: true
     fields:
-      - { name: title, label: Title, widget: string }
-      - { name: description, label: Description, widget: string }
-      - { name: background, label: Background, widget: image }
-      - { name: type, label: Type, widget: string }
-      - { name: order, label: Order, widget: number }
-      - { name: service_groups_description, label: Service groups description, widget: string }
+      - { name: title, label: Название, widget: string }
+      - { name: description, label: Описание, widget: string }
+      - { name: background, label: Фон, widget: image }
+      - { name: type, label: Тип, widget: string }
+      - { name: order, label: Порядок, widget: number }
+      - { name: service_groups_description, label: Аннотация к услугам, widget: string }
       - name: service_groups
-        label: Service groups
+        label: Группы услуг
         widget: list
         fields:
           - name: caption
-            label: Caption
+            label: Название
             widget: string
           - name: description
-            label: Description
+            label: Описание
             widget: string
           - name: picture
-            label: Picture
+            label: Картинка
             widget: image
           - name: price_examples
-            label: Price examples
+            label: Цены
             widget: list
             fields:
               - name: service_name
-                label: Service name
+                label: Название услуги
                 widget: string
               - name: service_price
-                label: Service price
+                label: Цена услуги
                 widget: string
