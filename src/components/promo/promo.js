@@ -20,17 +20,6 @@ class Promo extends Component {
   }
 
   componentDidMount() {
-    // this.interval = setInterval(() => {
-    //   this.setState(prevState => {
-    //     const { activeSlide, slides } = prevState
-
-    //     if (activeSlide === slides.length - 1) {
-    //       return { ...prevState, activeSlide: 0 }
-    //     } else {
-    //       return { ...prevState, activeSlide: activeSlide + 1 }
-    //     }
-    //   })
-    // }, SLIDER_INTERVAL)
     this.setSliderInterval()
   }
 
@@ -59,17 +48,6 @@ class Promo extends Component {
 
     clearInterval(this.interval)
     this.setSliderInterval()
-    // this.interval = setInterval(() => {
-    //   this.setState(prevState => {
-    //     const { activeSlide, slides } = prevState
-
-    //     if (activeSlide === slides.length - 1) {
-    //       return { ...prevState, activeSlide: 0 }
-    //     } else {
-    //       return { ...prevState, activeSlide: activeSlide + 1 }
-    //     }
-    //   })
-    // }, SLIDER_INTERVAL)
   }
 
   render() {
