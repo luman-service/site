@@ -1,13 +1,14 @@
 import React from 'react'
-import ServiceGroup from './service-group/service-group'
+
+import PriceTable from './price-table/price-table'
 import './service-page.scss'
 
-export default ({ data, showModal }) => {
-  const serviceGroupsData = data.markdownRemark.frontmatter.service_groups
-  const serviceGroupDescription =
-    data.markdownRemark.frontmatter.service_groups_description
+export default ({ data }) => {
+  const servicTableHtml = data.markdownRemark.frontmatter.table_html
 
-  if (!serviceGroupsData) {
+  console.log(data.markdownRemark.frontmatter)
+
+  if (!servicTableHtml) {
     return (
       <section id="service-groups">
         <div>Похоже вы не внесли данные для этой страницы!</div>
@@ -17,19 +18,7 @@ export default ({ data, showModal }) => {
 
   return (
     <section id="service-groups">
-      <div className="service-groups-description service-groups-description__wrapper">
-        <div className="service-groups-description service-groups-description__content">
-          {serviceGroupDescription}
-        </div>
-      </div>
-      {serviceGroupsData.map((serviceGroupData, i) => (
-        <ServiceGroup
-          data={serviceGroupData}
-          key={i}
-          index={i}
-          showModal={showModal}
-        />
-      ))}
+      <PriceTable tableHtml={servicTableHtml}/>
     </section>
   )
 }
@@ -39,15 +28,7 @@ export const queruy = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         service_groups_description
-        service_groups {
-          caption
-          description
-          picture
-          price_examples {
-            service_name
-            service_price
-          }
-        }
+        table_html
       }
     }
   }
