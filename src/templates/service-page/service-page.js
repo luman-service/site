@@ -10,14 +10,14 @@ export default ({ data }) => {
 
   if (!servicTableHtml) {
     return (
-      <section id="service-groups">
+      <section id="service-groups" className="price-table-container">
         <div>Похоже вы не внесли данные для этой страницы!</div>
       </section>
     )
   }
 
   return (
-    <section id="service-groups">
+    <section id="service-groups" className="price-table-container">
       <PriceTable tableHtml={servicTableHtml}/>
     </section>
   )

@@ -1,7 +1,6 @@
 .price-table
 {
-  min-width: 49%;
-  max-width: 49%;
+  max-width: 100%;
   border-collapse: collapse;
 
   &__td
@@ -12,8 +11,7 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: .9em;
+    font-size: .75em;
     padding: 10px;
-    white-space: nowrap;
   }
 }

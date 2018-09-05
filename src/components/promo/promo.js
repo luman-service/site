@@ -74,7 +74,7 @@ class Promo extends Component {
         </div>
         {slides.map((slide, i) => (
           <img
-            key={slide.title}
+            key={i}
             className={`promo__bg promo__bg_${
               activeSlide === i ? 'active' : ''
             }`}
