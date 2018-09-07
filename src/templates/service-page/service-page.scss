@@ -36,3 +36,16 @@
     margin: 0 0 20px 0;
   }
 }
+
+@media (max-width: 840px)
+{
+  .price-table-section {
+    width: 100%;
+    display: flex;
+    visibility: visible;
+    overflow-x: scroll;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
