@@ -5,8 +5,8 @@ import './service-page.scss'
 
 export default ({ data }) => {
   const servicTableHtml = data.markdownRemark.frontmatter.table_html
-
-  console.log(data.markdownRemark.frontmatter)
+  const serviceGroupDescription = data.markdownRemark.frontmatter.service_description
+  const picture = data.markdownRemark.frontmatter.background
 
   if (!servicTableHtml) {
     return (
@@ -17,8 +17,12 @@ export default ({ data }) => {
   }
 
   return (
-    <section id="service-groups" className="price-table-container">
-      <PriceTable tableHtml={servicTableHtml}/>
+    <section id="service-groups" className="price-table-section">
+      <div className="price-table-container">
+        <div className="service-groups-description">{serviceGroupDescription}</div>
+        <img className="service-group__picture" src={picture} />
+        <PriceTable tableHtml={servicTableHtml}/>
+      </div>
     </section>
   )
 }
@@ -27,7 +31,8 @@ export const queruy = graphql`
   query ServiceDataQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        service_groups_description
+        service_description
+        background
         table_html
       }
     }
