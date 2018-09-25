@@ -9,3 +9,10 @@
 
   background: url('./phone.png') left bottom / auto no-repeat;
 }
+
+@media (max-width: 840px)
+{
+  .phone {
+    margin-top: 6px;
+  }
+}
