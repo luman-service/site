@@ -1,0 +1,104 @@
+.dummy {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background: url('./background.png') center no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 440px;
+  height: 25vh;
+  width: 35vw;
+  margin-top: 10vh;
+}
+
+.logo-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    &__luman {
+      width: 150px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 2.7em;
+    }
+
+    &__service {
+      width: 150px;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.5em;
+      letter-spacing: 10px;
+    }
+  }
+
+  &__in-development {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.9em;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff;
+  }
+}
+
+.contacts-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contacts-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-cell__content {
+  width: 300px;
+}
+
+.contact-prefix {
+  font-size: 0.75em;
+  opacity: 0.4;
+  margin-bottom: 5px;
+}
+
+.address {
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding-left: 25px;
+  max-width: 250px;
+  background: url('./mark.png') left top / auto no-repeat;
+
+  &-building {
+    text-transform: lowercase;
+    font-size: .7em;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-width: 100%;
+    height: 50vh;
+  }
+
+  .contacts-row {
+    height: 25vh;
+    flex-direction: column;
+  }
+
+
+}
