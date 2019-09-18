@@ -1,16 +1,46 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { GoogleApiWrapper } from 'google-maps-react'
 
-import Dummy from '../components/dummy/dummy'
+import Brands from '../components/brands/brands'
+import Contacts from '../components/contacts/contacts'
+import Header from '../components/header/header'
+import Map from '../components/map/map'
+import Modal from '../components/modal/modal'
+import Promo from '../components/promo/promo'
 
 import './index.css'
 
 class IndexLayout extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      modal: {
+        show: false,
+        type: ''
+      }
+    }
+  }
+
+  hideModal = () => {
+    this.setState({ modal: { show: false, type: '' } })
+  }
+
+  showModal = type => {
+    this.setState({ modal: { show: true, type } })
+  }
+
   render() {
     const {
+      modal: { show, type }
+    } = this.state
+    const {
+      children,
       data: {
         site: { siteMetadata }
       },
+      google
     } = this.props
 
     return (
@@ -23,10 +53,20 @@ class IndexLayout extends React.Component {
             { name: 'keywords', content: '' }
           ]}
         />
-        <Dummy />
+        <Header showModal={this.showModal} />
+        <Promo showModal={this.showModal} />
+        <Brands />
+        {children({ ...this.props, showModal: this.showModal })}
+        <Contacts showModal={this.showModal} />
+        <Map google={google} />
+        {show && <Modal type={type} hideModal={this.hideModal} />}
       </div>
     )
   }
+}
+
+IndexLayout.propTypes = {
+  children: PropTypes.func
 }
 
 export const query = graphql`
@@ -39,4 +79,6 @@ export const query = graphql`
   }
 `
 
-export default IndexLayout
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyDz1KVhg7KuSCZHvy2oCuGmqTXZv2RZfwQ'
+})(IndexLayout)
