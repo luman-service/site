@@ -2,6 +2,6 @@ import React from 'react'
 
 import './phone.scss'
 
-const Phone = () => <div className="phone">+7 903 557 67 22</div>
+const Phone = () => <div className="phone">+7 499 643 85 06</div>
 
 export default Phone

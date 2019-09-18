@@ -43,7 +43,7 @@ const Contacts = ({ showModal }) => (
         </div>
         <div className="contacts__address">
           кутузовский проспект 36{' '}
-          <span className="contacts__address-building">стр.</span> 15
+          <span className="contacts__address-building">стр.</span> 41
         </div>
       </div>
     </div>
