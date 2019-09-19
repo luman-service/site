@@ -4,9 +4,8 @@ import PriceTable from './price-table/price-table'
 import './service-page.scss'
 
 export default ({ data }) => {
-  console.log(data.markdownRemark.frontmatter)
   const servicTableImageSrc = data.markdownRemark.frontmatter.table_image
-  const serviceGroupDescription = data.markdownRemark.frontmatter.service_description
+  const serviceGroupDescription = data.markdownRemark.frontmatter.description
   const picture = data.markdownRemark.frontmatter.background
 
   if (!servicTableImageSrc) {
@@ -32,7 +31,7 @@ export const query = graphql`
   query ServiceDataQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
-        service_description
+        description
         background
         table_image
       }
