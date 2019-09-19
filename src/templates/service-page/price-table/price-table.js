@@ -2,6 +2,12 @@ import React from 'react'
 
 import './price-table.scss'
 
-const PriceTable = ({ tableHtml }) => <div dangerouslySetInnerHTML={{ __html: tableHtml }} />
+const PriceTable = ({ tableImageSrc }) => (
+  <img
+    className="price-table"
+    src={tableImageSrc}
+    alt=""
+  />
+)
 
 export default PriceTable

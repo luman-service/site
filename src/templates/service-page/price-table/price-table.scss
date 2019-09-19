@@ -1,17 +1,4 @@
 .price-table
 {
   max-width: 100%;
-  border-collapse: collapse;
-
-  &__td
-  {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #666666;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: .75em;
-    padding: 5px;
-  }
 }

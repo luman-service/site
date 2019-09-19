@@ -7,7 +7,7 @@ const getBackground = background => ({
   backgroundImage: `linear-gradient(0.25turn, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(${background})`
 })
 
-const Service = ({ background, description, title, text, type, slug }) => (
+const Service = ({ background, description, title, text, slug }) => (
   <article className="service service_body" style={getBackground(background)}>
     <div className="service__name">{title}</div>
     <div className="service__desc">{description}</div>

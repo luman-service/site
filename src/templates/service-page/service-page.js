@@ -4,11 +4,12 @@ import PriceTable from './price-table/price-table'
 import './service-page.scss'
 
 export default ({ data }) => {
-  const servicTableHtml = data.markdownRemark.frontmatter.table_html
+  console.log(data.markdownRemark.frontmatter)
+  const servicTableImageSrc = data.markdownRemark.frontmatter.table_image
   const serviceGroupDescription = data.markdownRemark.frontmatter.service_description
   const picture = data.markdownRemark.frontmatter.background
 
-  if (!servicTableHtml) {
+  if (!servicTableImageSrc) {
     return (
       <section id="service-groups" className="price-table-container">
         <div>Похоже вы не внесли данные для этой страницы!</div>
@@ -21,19 +22,19 @@ export default ({ data }) => {
       <div className="price-table-container">
         <div className="service-groups-description">{serviceGroupDescription}</div>
         <img className="service-group__picture" src={picture} />
-        <PriceTable tableHtml={servicTableHtml}/>
+        <PriceTable tableImageSrc={servicTableImageSrc}/>
       </div>
     </section>
   )
 }
 
-export const queruy = graphql`
+export const query = graphql`
   query ServiceDataQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         service_description
         background
-        table_html
+        table_image
       }
     }
   }
