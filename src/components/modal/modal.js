@@ -30,7 +30,7 @@ class Modal extends React.Component {
           </div>
           <form
             method="POST"
-            action="https://formspree.io/serviceluman@gmail.com"
+            action="https://formspree.io/mznrqzlm"
             className="modal__form">
             <div>
               <input
